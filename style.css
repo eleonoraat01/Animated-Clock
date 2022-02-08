@@ -1,0 +1,80 @@
+.clock {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 10px solid #000;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  background: #eee;
+  transform: translate(-50%, -50%);
+}
+.minutes {
+  position: absolute;
+  content: "";
+  height: 130px;
+  width: 10px;
+  background: black;
+  top: 50%;
+  left: calc(50% - 5px);
+  border-radius: 5px;
+  animation: spin 3600s linear infinite;
+  transform-origin: top;
+}
+.hours {
+  position: absolute;
+  content: "";
+  height: 100px;
+  width: 10px;
+  background: black;
+  top: 50%;
+  left: calc(50% - 5px);
+  border-radius: 5px;
+  animation: spin 86400s linear infinite;
+  transform-origin: top;
+}
+.seconds {
+  position: absolute;
+  content: "";
+  height: 120px;
+  width: 2px;
+  background: red;
+  top: 50%;
+  left: calc(50% - 5px);
+  border-radius: 1px;
+  animation: spin 60s linear infinite;
+  transform-origin: top;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+.dot {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: black;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.main_3_6_9_12 {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: black;
+  left: 50%;
+  top: calc(50% - 145px);
+  z-index: 2;
+  transform: translateX(-50%);
+  box-shadow: 140px 145px 0 0 black, -140px 145px 0 0 black, 0 280px 0 0 black;
+}
